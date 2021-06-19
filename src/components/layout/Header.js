@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import { menuData } from "../../data/menuData";
 import MenuButton from "../buttons/MenuButton";
-import MenuToolTip from "../tooltips/MenuToolTip";
+import MenuToolTip from "../tooltips/MenuToolTip.js";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
