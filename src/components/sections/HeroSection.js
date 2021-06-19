@@ -1,15 +1,14 @@
-import React from "react"
-import styled, { keyframes } from "styled-components"
-import PurchaseButton from "../buttons/PurchaseButton"
-import MockupAnimation from "../animations/MockupAnimation"
-import WaveBackground from "../backgrounds/WaveBackground"
-import { H1, MediumText } from "../styles/TextStyles"
-import { themes } from "../styles/ColorStyles"
+import React from "react";
+import styled, { keyframes } from "styled-components";
+import PurchaseButton from "../buttons/PurchaseButton";
+import MockupAnimation from "../animations/MockupAnimation";
+import WaveBackground from "../backgrounds/WaveBackground";
+import { H1, MediumText } from "../styles/TextStyles";
+import { themes } from "../styles/ColorStyles";
 
 function HeroSection() {
   return (
     <Wrapper>
-      <WaveBackground />
       <ContentWrapper>
         <TextWrapper>
           <Title>
@@ -28,21 +27,21 @@ function HeroSection() {
         <MockupAnimation />
       </ContentWrapper>
     </Wrapper>
-  )
+  );
 }
 
-export default HeroSection
+export default HeroSection;
 
 //Fade in animations
 const animation = keyframes`
   0% { opacity: 0; transform: translateY(-10px); }
   80% { opacity: 0.5; }
   100% { opacity: 1; transform: translateY(0px); }
-`
+`;
 
 const Wrapper = styled.div`
   overflow: hidden; //Clip the overflow content
-`
+`;
 
 const ContentWrapper = styled.div`
   max-width: 1234px; //Can be smaller if screen size is smaller
@@ -59,7 +58,7 @@ const ContentWrapper = styled.div`
     gap: 60px;
     padding: 150px 20px 250px;
   }
-`
+`;
 
 const TextWrapper = styled.div`
   max-width: 360px;
@@ -84,7 +83,7 @@ const TextWrapper = styled.div`
       animation-delay: 0.4s;
     }
   }
-`
+`;
 const Title = styled(H1)`
   color: ${themes.dark.text1};
   background: linear-gradient(180deg, #730040 0%, #301cbe 100%);
@@ -102,6 +101,6 @@ const Title = styled(H1)`
   @media (max-width: 450px) {
     font-size: 48px;
   }
-`
+`;
 
-const Description = styled(MediumText)``
+const Description = styled(MediumText)``;

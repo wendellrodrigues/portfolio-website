@@ -1,19 +1,19 @@
-import React, { useEffect, useRef, useState } from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
-import { menuData } from "../../data/menuData"
-import MenuButton from "../buttons/MenuButton"
-import MenuToolTip from "../tooltips/MenuToolTip"
+import React, { useEffect, useRef, useState } from "react";
+import { Link } from "gatsby";
+import styled from "styled-components";
+import { menuData } from "../../data/menuData";
+import MenuButton from "../buttons/MenuButton";
+import MenuToolTip from "../tooltips/MenuToolTip";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false)
-  const ref = useRef()
-  const tooltipRef = useRef()
+  const [isOpen, setIsOpen] = useState(false);
+  const ref = useRef();
+  const tooltipRef = useRef();
 
   //prevents default clicking behavior for menu button
   function handleClick(event) {
-    setIsOpen(!isOpen)
-    event.preventDefault()
+    setIsOpen(!isOpen);
+    event.preventDefault();
   }
 
   function handleClickOutside(event) {
@@ -25,7 +25,7 @@ export default function Header() {
       //Dont exit if clicked inside meny
       !tooltipRef.current.contains(event.target)
     ) {
-      setIsOpen(false)
+      setIsOpen(false);
     }
   }
 
@@ -33,11 +33,11 @@ export default function Header() {
   //Use effect listens to every single state change
   useEffect(() => {
     //Whenver doc is clicked on
-    document.addEventListener("mousedown", handleClickOutside)
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
-  }, [])
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <Wrapper>
@@ -50,7 +50,7 @@ export default function Header() {
             <MenuButton
               item={item}
               key={index}
-              onClick={event => handleClick(event)}
+              onClick={(event) => handleClick(event)}
             />
           ) : (
             <MenuButton item={item} key={index} />
@@ -60,7 +60,7 @@ export default function Header() {
         <HamburgerWrapper>
           <MenuButton
             item={{ title: "", icon: "/images/icons/hamburger.svg", link: "/" }}
-            onClick={event => handleClick(event)}
+            onClick={(event) => handleClick(event)}
           />
         </HamburgerWrapper>
       </MenuWrapper>
@@ -68,7 +68,7 @@ export default function Header() {
         <MenuToolTip isOpen={isOpen} />
       </div>
     </Wrapper>
-  )
+  );
 }
 
 const Wrapper = styled.div`
@@ -89,12 +89,12 @@ const Wrapper = styled.div`
     top: 20px;
     padding: 0 20px;
   }
-`
+`;
 
 const MenuWrapper = styled.div`
   display: grid;
   gap: 30px;
-  grid-template-columns: repeat(${props => props.count}, auto);
+  grid-template-columns: repeat(${(props) => props.count}, auto);
 
   @media (max-width: 768px) {
     //Adaptive screens (hamburger)
@@ -103,8 +103,12 @@ const MenuWrapper = styled.div`
     }
     grid-template-columns: auto;
   }
-`
+`;
 
 const HamburgerWrapper = styled.div`
   display: none;
-`
+  @media (max-width: 768px) {
+    //Adaptive screens (hamburger)
+    display: grid;
+  }
+`;
