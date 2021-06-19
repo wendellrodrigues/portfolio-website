@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import { menuData } from "../../data/menuData";
 import MenuButton from "../buttons/MenuButton";
-import MenuToolTip from "../tooltips/MenuToolTip.js";
+import MenuToolTips from "../tooltips/MenuToolTips.js";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,7 +65,7 @@ export default function Header() {
         </HamburgerWrapper>
       </MenuWrapper>
       <div ref={tooltipRef}>
-        <MenuToolTip isOpen={isOpen} />
+        <MenuToolTips isOpen={isOpen} />
       </div>
     </Wrapper>
   );

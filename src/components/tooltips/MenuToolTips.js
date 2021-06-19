@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { tooltipData } from "../../data/menuData";
 import MenuButton from "../buttons/MenuButton";
 
-export default function MenuToolTip(props) {
+export default function MenuToolTips(props) {
   const { isOpen } = props;
   return (
     <Wrapper isOpen={isOpen}>
