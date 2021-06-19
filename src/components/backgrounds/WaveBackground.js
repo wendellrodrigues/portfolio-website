@@ -1,5 +1,5 @@
-import React from "React"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 
 export default function WaveBackground() {
   return (
@@ -12,13 +12,13 @@ export default function WaveBackground() {
       <Wave src="/images/waves/hero-wave2.svg" style={{ top: "350px" }} />
       <BottomWave src="/images/waves/hero-wave3.svg" style={{ top: "550px" }} />
     </Wrapper>
-  )
+  );
 }
 
 const Wrapper = styled.div`
   position: relative;
   background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
-`
+`;
 
 const Wave = styled.img`
   position: absolute;
@@ -28,14 +28,14 @@ const Wave = styled.img`
   @media (min-width: 1440px) {
     width: 100%;
   }
-`
+`;
 
 //Reusing same properties of wave
 const BottomWave = styled(Wave)`
   @media (prefers-color-scheme: dark) {
     content: url("/images/waves/hero-wave3-dark.svg");
   }
-`
+`;
 
 const Background = styled.div`
   background: linear-gradient(180deg, #4316db 0%, #9076e7 100%);
@@ -43,4 +43,4 @@ const Background = styled.div`
   width: 100%;
   height: 800px;
   z-index: -1;
-`
+`;
