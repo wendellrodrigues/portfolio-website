@@ -108,7 +108,6 @@ const MenuWrapper = styled.div`
 const HamburgerWrapper = styled.div`
   display: none;
   @media (max-width: 768px) {
-    //Adaptive screens (hamburger)
     display: grid;
   }
 `;
