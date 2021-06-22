@@ -11,8 +11,8 @@ export const H1 = styled.h1`
 
 export const H2 = styled.h2`
   font-weight: bold;
-  font-size: 40px;
-
+  font-size: 35px;
+  color: #bfbdbd;
   @media (max-width: 768px) {
     font-size: 28px;
   }
@@ -20,10 +20,10 @@ export const H2 = styled.h2`
 
 export const H3 = styled.h3`
   font-weight: bold;
-  font-size: 30px;
-
+  font-size: 24px;
+  color: #bfbdbd;
   @media (max-width: 768px) {
-    font-size: 24px;
+    font-size: 20px;
   }
 `;
 

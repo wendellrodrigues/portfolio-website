@@ -1,14 +1,25 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
+import Resume from "../../../static/images/Resume.pdf";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 export default function MenuButton(props) {
   const { item } = props;
 
+  //Handle downloadable resume
+  if (item.title == "Resume") {
+    return (
+      <a href={Resume} target="_blank" rel="noopener noreferrer">
+        <MenuItem title={item.title}>{item.title}</MenuItem>
+      </a>
+    );
+  }
+
   return (
-    <Link to={item.link} onClick={props.onClick}>
+    <AnchorLink to={item.link} onClick={props.onClick}>
       <MenuItem title={item.title}>{item.title}</MenuItem>
-    </Link>
+    </AnchorLink>
   );
 }
 

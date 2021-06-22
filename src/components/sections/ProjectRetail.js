@@ -8,7 +8,7 @@ import { themes } from "../styles/ColorStyles";
 
 export default function ProjectRetail() {
   return (
-    <Wrapper>
+    <Wrapper id="projectretail">
       <ContentWrapper>
         <TextWrapper>
           <Title src="/images/logos/projectretail-title.svg" />

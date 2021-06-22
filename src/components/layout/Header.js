@@ -45,17 +45,9 @@ export default function Header() {
         <img src="/images/logos/logo.svg" />
       </Link>
       <MenuWrapper count={menuData.length} ref={ref}>
-        {menuData.map((item, index) =>
-          item.link === "/account" ? (
-            <MenuButton
-              item={item}
-              key={index}
-              onClick={(event) => handleClick(event)}
-            />
-          ) : (
-            <MenuButton item={item} key={index} />
-          )
-        )}
+        {menuData.map((item, index) => (
+          <MenuButton item={item} key={index} />
+        ))}
 
         <HamburgerWrapper>
           <MenuButton
@@ -109,5 +101,8 @@ const HamburgerWrapper = styled.div`
   display: none;
   @media (max-width: 768px) {
     display: grid;
+    height: 50px;
+    width: 50px;
+    color: white;
   }
 `;

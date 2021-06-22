@@ -2,22 +2,22 @@ export const menuData = [
   {
     title: "About",
     icon: "/images/icons/person.svg",
-    link: "/tutorials",
-  },
-  {
-    title: "Experience",
-    icon: "/images/icons/calendar.svg",
-    link: "/search",
-  },
-  {
-    title: "Resume",
-    icon: "/images/icons/courses.svg",
-    link: "/courses",
+    link: "#about",
   },
   {
     title: "Projects",
     icon: "/images/icons/code.svg",
-    link: "/account",
+    link: "/#projectretail",
+  },
+  {
+    title: "Resume",
+    icon: "/images/icons/courses.svg",
+    link: "/resume",
+  },
+  {
+    title: "Connect",
+    icon: "/images/icons/courses.svg",
+    link: "/resume",
   },
 ];
 
