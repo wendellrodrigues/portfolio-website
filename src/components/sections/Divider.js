@@ -2,17 +2,13 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 
 export default function Divider() {
-  return (
-    <Wrapper>
-      <Rectangle />
-    </Wrapper>
-  );
+  return <Wrapper>{/* <Rectangle /> */}</Wrapper>;
 }
 
 const Wrapper = styled.div`
   position: relative;
   overflow: hidden; //Clip the overflow content
-  height: 50px;
+  height: 10px;
   width: 100%;
   background: white;
   justify-items: center;

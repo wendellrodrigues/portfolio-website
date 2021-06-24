@@ -29,6 +29,11 @@ const Wrapper = styled.div`
   justify-content: center;
   border-radius: 20px;
 
+  @media (max-width: 500px) {
+    margin: auto;
+    margin-bottom: 25px;
+  }
+
   //All sub elements and parent have this element
   *,
   & {
@@ -48,35 +53,14 @@ const Wrapper = styled.div`
   }
 
   @media (max-width: 800px) {
-    transform: scale(0.8);
-    -webkit-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    -webkit-transform: scale(0.8);
-    -moz-transform: scale(0.8);
-    -o-transform: scale(0.8);
-    transform-origin: top left;
-    :hover {
-      transform: translateY(-1px) scale(0.85); //Moves item up/down on hover
-    }
-  }
-
-  @media (max-width: 650px) {
-    transform: scale(0.6);
-    -webkit-transform: scale(0.6);
-    -ms-transform: scale(0.6);
-    -webkit-transform: scale(0.6);
-    -moz-transform: scale(0.6);
-    -o-transform: scale(0.6);
-    transform-origin: top left;
-    :hover {
-      transform: translateY(-1px) scale(0.65); //Moves item up/down on hover
-    }
+    width: 160px;
+    height: 40px;
+    border-radius: 15px;
   }
 `;
 
 const Title = styled(Caption)`
   color: white;
-
   @media (max-width: 800px) {
     font-size: 12px;
   }

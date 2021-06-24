@@ -86,10 +86,6 @@ export default function Title() {
             <LinkText>About Me</LinkText>
           </AnchorLink>
         </TextWrapper>
-
-        {/** Subtitle */}
-
-        {/** Buttons */}
       </ContentWrapper>
     </Wrapper>
   );
@@ -111,13 +107,17 @@ const Wrapper = styled.div`
   height: 800px;
   margin-top: 150px;
 
-  @media (max-width: 500px) {
-    margin-top: 80px;
+  @media (max-width: 2000px) {
+    margin-left: 0;
   }
 
   //Dont show particles on small screen sizes
   @media (max-width: 1000px) {
     height: auto;
+  }
+
+  @media (max-width: 500px) {
+    margin-top: 80px;
   }
 `;
 
@@ -262,6 +262,10 @@ const ButtonsWrapper = styled.div`
   width: 150px;
   margin-top: 120px;
 
+  @media (max-width: 1000px) {
+    margin-top: 50px;
+  }
+
   @media (max-width: 500px) {
     margin-top: 20px;
     width: 140px;
@@ -272,6 +276,7 @@ const CircleButtonWrapper = styled.div`
   width: 50px;
   height: 50px;
   cursor: pointer;
+  display: grid;
 
   @media (max-width: 500px) {
     width: 30px;
@@ -286,6 +291,10 @@ const CircleButtonWrapper = styled.div`
     filter: brightness(60%) saturate(120%);
     transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
+
+  @media (max-width: 1000px) {
+    margin: auto;
+  }
 `;
 
 const CircleButton = styled.img``;
@@ -299,6 +308,10 @@ const LinkText = styled(MediumText)`
   :hover {
     filter: brightness(60%) saturate(120%);
     transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  @media (max-width: 1000px) {
+    margin-top: 70px;
   }
 
   @media (max-width: 500px) {

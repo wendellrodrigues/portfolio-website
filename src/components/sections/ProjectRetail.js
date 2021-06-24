@@ -2,7 +2,6 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import ProjectRetailButton from "../buttons/ProjectRetailButton";
 import ProjectRetailAnimation from "../animations/ProjectRetailAnimation";
-import WaveBackground from "../backgrounds/WaveBackground";
 import { H1, MediumText } from "../styles/TextStyles";
 import { themes } from "../styles/ColorStyles";
 
@@ -38,7 +37,11 @@ const animation = keyframes`
 const Wrapper = styled.div`
   //display: grid;
   overflow: hidden; //Clip the overflow content
-  padding-bottom: 500px;
+  padding-bottom: 100px;
+
+  @media (max-width: 500px) {
+    padding-bottom: 20px;
+  }
 `;
 
 const ContentWrapper = styled.div`
@@ -64,7 +67,7 @@ const ContentWrapper = styled.div`
 
   @media (max-width: 500px) {
     grid-template-columns: auto;
-    margin-top: 200px;
+    margin-top: 90px;
     align-items: center; //Aligns the items rather than the content (extra space)
     justify-content: center;
   }
@@ -108,9 +111,17 @@ const TextWrapper = styled.div`
   }
 
   @media (max-width: 500px) {
+    max-width: 400px;
+    align-items: center; //Aligns the items rather than the content (extra space)
+    justify-content: center;
     padding-left: 0px;
   }
+
+  @media (max-width: 400px) {
+    max-width: 300px;
+  }
 `;
+
 const Title = styled.img`
   margin-bottom: 20px;
 
@@ -120,6 +131,16 @@ const Title = styled.img`
 
   @media (max-width: 650px) {
     width: 200px;
+  }
+
+  @media (max-width: 500px) {
+    width: 300px;
+    margin: auto;
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: 400px) {
+    width: 250px;
   }
 `;
 

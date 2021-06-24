@@ -2,7 +2,7 @@ export const menuData = [
   {
     title: "About",
     icon: "/images/icons/person.svg",
-    link: "#about",
+    link: "/#about",
   },
   {
     title: "Projects",
