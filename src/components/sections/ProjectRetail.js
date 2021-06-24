@@ -59,10 +59,13 @@ const ContentWrapper = styled.div`
   //Iphone
   @media (max-width: 960px) {
     margin-horizontal: 30px;
+    margin-top: 150px;
+    margin-bottom: 20px;
   }
 
   @media (max-width: 650px) {
     grid-template-columns: 250px auto;
+    margin-bottom: 20px;
   }
 
   @media (max-width: 500px) {
@@ -70,6 +73,7 @@ const ContentWrapper = styled.div`
     margin-top: 90px;
     align-items: center; //Aligns the items rather than the content (extra space)
     justify-content: center;
+    margin-bottom: 20px;
   }
 `;
 
@@ -149,7 +153,7 @@ const Description = styled(MediumText)`
   margin-bottom: 40px;
 
   @media (max-width: 800px) {
-    font-size: 12px;
+    font-size: 14px;
   }
 `;
 
