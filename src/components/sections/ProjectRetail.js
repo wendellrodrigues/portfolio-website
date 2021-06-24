@@ -9,7 +9,12 @@ export default function ProjectRetail() {
   return (
     <Wrapper id="projectretail">
       <ContentWrapper>
-        <TextWrapper>
+        <TextWrapper
+          data-sal="fade"
+          data-sal-duration="2000"
+          data-sal-delay="300"
+          data-sal-easing="ease"
+        >
           <Title src="/images/logos/projectretail-title.svg" />
           <Description>
             Project Retail is an interactive solution for retail shoppers who
@@ -19,7 +24,12 @@ export default function ProjectRetail() {
           </Description>
           <ProjectRetailButton />
         </TextWrapper>
-        <AnimationWrapper>
+        <AnimationWrapper
+          data-sal="fade"
+          data-sal-duration="2000"
+          data-sal-delay="700"
+          data-sal-easing="ease"
+        >
           <ProjectRetailAnimation />
         </AnimationWrapper>
       </ContentWrapper>

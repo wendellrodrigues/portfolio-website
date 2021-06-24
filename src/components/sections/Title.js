@@ -4,59 +4,20 @@ import { H1, H2, H3, MediumText } from "../styles/TextStyles";
 import { themes } from "../styles/ColorStyles";
 import Particles from "react-tsparticles";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
+import Typewriter from "typewriter-effect";
 
 export default function Title() {
-  const animateOptions = {
-    fpsLimit: 120,
-    particles: {
-      color: {
-        value: "#ffffff",
-      },
-      links: {
-        color: "#ffffff",
-        distance: 1,
-        enable: true,
-        opacity: 0.05,
-        width: 10,
-      },
-      collisions: {
-        enable: true,
-      },
-      move: {
-        direction: "none",
-        enable: true,
-        outMode: "bounce",
-        random: false,
-        speed: 0.2,
-        straight: false,
-      },
-      number: {
-        density: {
-          enable: true,
-          value_area: 500,
-        },
-        value: 80,
-      },
-      opacity: {
-        value: 0.5,
-      },
-      shape: {
-        type: "circle",
-      },
-      size: {
-        random: true,
-        value: 1,
-      },
-    },
-  };
-
   const githubURL = "https://github.com/wendellrodrigues";
   const linkedinURL = "https://www.linkedin.com/in/wendellrodrigues/";
 
   return (
     <Wrapper id="title">
-      <ContentWrapper>
-        {/** Image */}
+      <ContentWrapper
+        data-sal="fade"
+        data-sal-duration="2000"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+      >
         <ImageWrapper>
           <WendellImage src="/images/avatars/wendell_full.svg" />
           <WendellCircleImage src="/images/avatars/wendell_circle.svg" />
@@ -65,11 +26,20 @@ export default function Title() {
         {/** Title*/}
         <TextWrapper>
           <HelloText>Hello! My name is</HelloText>
-          <NameText>Wendell Rodrigues</NameText>
+
+          <NameText>
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter
+                  .pauseFor(1300)
+                  .typeString("Wendell Rodrigues")
+                  .start();
+              }}
+            />
+          </NameText>
           <DescriptionText>
             I'm a Software Engineer from San Jose, CA
           </DescriptionText>
-
           <ButtonsWrapper>
             <CircleButtonWrapper>
               <a href={githubURL} target="_blank" rel="noopener noreferrer">

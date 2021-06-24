@@ -19,6 +19,9 @@ module.exports = {
         icon: `static/images/logos/logo.svg`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-scroll-reveal`,
+    },
     `gatsby-plugin-styled-components`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

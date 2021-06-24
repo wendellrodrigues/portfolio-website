@@ -5,12 +5,18 @@ import { themes } from "../styles/ColorStyles";
 import Particles from "react-tsparticles";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { AboutText } from "../Constants.js";
+import { Parallax } from "react-parallax";
 
 export default function About() {
   return (
     <Wrapper id="about">
       <ContentWrapper>
-        <TopContentWrapper>
+        <TopContentWrapper
+          data-sal="fade"
+          data-sal-duration="2000" //
+          data-sal-delay="300"
+          data-sal-easing="ease"
+        >
           <DescriptionWrapper>
             <Title>About</Title>
             <Tagline>{AboutText.tagline}</Tagline>
@@ -18,7 +24,13 @@ export default function About() {
           </DescriptionWrapper>
           <MasterSkillsWrapper>
             <SkillsTitle>Skills</SkillsTitle>
-            <SkillsWrapper>
+            <SkillsWrapper
+              id="about"
+              data-sal-duration="2000"
+              data-sal="fade"
+              data-sal-delay="300"
+              data-sal-easing="ease"
+            >
               <Skill>Javascript</Skill>
               <Skill>SwiftUI</Skill>
               <Skill>ReactJS</Skill>
@@ -31,7 +43,12 @@ export default function About() {
           </MasterSkillsWrapper>
         </TopContentWrapper>
         <HorizontalDivider />
-        <BottomContentWrapper>
+        <BottomContentWrapper
+          data-sal="fade"
+          data-sal-duration="2000"
+          data-sal-delay="300"
+          data-sal-easing="ease"
+        >
           <BottomContent>
             <EduExpWrapper>
               <EduExpTitle>Education</EduExpTitle>
