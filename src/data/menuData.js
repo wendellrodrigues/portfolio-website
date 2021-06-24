@@ -15,7 +15,7 @@ export const menuData = [
     link: "/resume",
   },
   {
-    title: "Connect",
+    title: "Contact",
     icon: "",
     link: "/resume",
   },

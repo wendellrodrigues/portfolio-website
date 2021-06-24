@@ -16,6 +16,14 @@ export default function MenuButton(props) {
     );
   }
 
+  if (item.title == "Contact") {
+    return (
+      <a href="mailto:w@wendellrodrigues.com">
+        <MenuItem title={item.title}>{item.title}</MenuItem>
+      </a>
+    );
+  }
+
   if (item.icon !== "") {
     return (
       <MenuItem title={item.title} onClick={props.onClick}>
