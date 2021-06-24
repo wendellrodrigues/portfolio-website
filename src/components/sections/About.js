@@ -58,6 +58,7 @@ export default function About() {
               <EduExpTitle>Experience</EduExpTitle>
               <EduExpText>
                 TiVo Corporation | San Jose, CA | Software Engineer Intern
+                <br />
                 <SubText>JUNE 2019 - AUGUST 2019</SubText>
                 <br />
                 Designed and architected serialized REST API endpoints to

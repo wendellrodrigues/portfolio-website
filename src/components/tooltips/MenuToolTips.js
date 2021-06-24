@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { tooltipData } from "../../data/menuData";
+import { menuData } from "../../data/menuData";
 import MenuButton from "../buttons/MenuButton";
 
 export default function MenuToolTips(props) {
   const { isOpen } = props;
   return (
     <Wrapper isOpen={isOpen}>
-      {tooltipData.map((item, index) => (
+      {menuData.map((item, index) => (
         <MenuButton item={item} key={index} />
       ))}
     </Wrapper>

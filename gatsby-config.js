@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Design+Code`,
-    description: `Don’t skip design. Learn design and code, by building real apps with React and Swift. Complete courses about the best tools.`,
-    author: `@wendellrodrigues89`,
+    title: `Wendell Rodrigues`,
+    description: `Portfoio Website for Wendell Rodrigues`,
+    author: `Wendell Rodrigues`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,4 +18,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

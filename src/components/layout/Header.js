@@ -82,7 +82,6 @@ const Wrapper = styled.div`
     padding: 0 20px;
   }
 `;
-
 const MenuWrapper = styled.div`
   display: grid;
   gap: 30px;
@@ -99,10 +98,9 @@ const MenuWrapper = styled.div`
 
 const HamburgerWrapper = styled.div`
   display: none;
+
   @media (max-width: 768px) {
+    //Adaptive screens (hamburger)
     display: grid;
-    height: 50px;
-    width: 50px;
-    color: white;
   }
 `;

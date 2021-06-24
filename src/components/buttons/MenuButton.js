@@ -16,6 +16,15 @@ export default function MenuButton(props) {
     );
   }
 
+  if (item.icon !== "") {
+    return (
+      <MenuItem title={item.title} onClick={props.onClick}>
+        <img src={item.icon} alt={item.title} />
+        {item.title}
+      </MenuItem>
+    );
+  }
+
   return (
     <AnchorLink to={item.link} onClick={props.onClick}>
       <MenuItem title={item.title}>{item.title}</MenuItem>
